@@ -1,0 +1,35 @@
+<% include ./../include/header.ejs %>
+
+<form method="post" action="/user/select">
+    <div class="container text-center" style="padding-top: 10%">
+        <h2>请输入你想要查询的单词</h2> <br />
+
+<!--        <div class="row">-->
+<!--            <input type="text" class="form-control " autofocus="autofocus" autocomplete="off" placeholder="请输入查询的单词." name="select">-->
+<!--            </input>-->
+<!--            <br>-->
+<!--           <button type="submit" class="btn btn-outline-primary col-md-1" >查询</button>-->
+<!--        </div>-->
+        <div class="row">
+            <div class="input-group offset-md-3 col-md-5">
+
+                <input type="text" class="form-control " autofocus="autofocus" autocomplete="off" placeholder="请输入查询的单词." name="select">
+            </div>
+            <button type="submit" class="btn btn-primary col-md-1">确定</button>
+        </div>
+
+        <h3>&nbsp;</h3>
+
+    <% if(success.length > 0){ %>
+            <div class="offset-md-3 col-md-6 alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+        <% if(error.length > 0){ %>
+            <div class="offset-md-3 col-md-6 alert alert-danger" >
+                <%= error %>
+            </div>
+        <% } %>
+    </div>
+</form>
+<% include ./../include/footer.ejs %>

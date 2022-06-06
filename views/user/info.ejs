@@ -1,0 +1,91 @@
+<% include ./../include/header.ejs %>
+
+<form method="post" action="/user/changepassword">
+    <div class="container" style="padding-top: 5%">
+        <div class="offset-md-2 col-md-8">
+            <h3><%= queryuser %> 已通过</h3>
+            <table class="table table-striped table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">书\单元</th>
+                        <th scope="col">第一单元</th>
+                        <th scope="col">第二单元</th>
+                        <th scope="col">第三单元</th>
+                        <th scope="col">第四单元</th>
+                        <th scope="col">第五单元</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">必修一</th>
+                        <th><%= passed.indexOf("必修一 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修一 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修一 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修一 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修一 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">必修二</th>
+                        <th><%= passed.indexOf("必修二 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修二 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修二 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修二 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修二 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">必修三</th>
+                        <th><%= passed.indexOf("必修三 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修三 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修三 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修三 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修三 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">必修四</th>
+                        <th><%= passed.indexOf("必修四 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修四 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修四 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修四 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修四 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">必修五</th>
+                        <th><%= passed.indexOf("必修五 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修五 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修五 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修五 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("必修五 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">选修六</th>
+                        <th><%= passed.indexOf("选修六 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修六 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修六 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修六 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修六 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">选修七</th>
+                        <th><%= passed.indexOf("选修七 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修七 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修七 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修七 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修七 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">选修八</th>
+                        <th><%= passed.indexOf("选修八 第一单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修八 第二单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修八 第三单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修八 第四单元") == -1 ? "" : "√"%></th>
+                        <th><%= passed.indexOf("选修八 第五单元") == -1 ? "" : "√"%></th>
+                    </tr>
+                </tbody>
+            </table>
+                
+            </div>
+        </div>
+    </div>
+</form>
+
+<% include ./../include/footer.ejs %>

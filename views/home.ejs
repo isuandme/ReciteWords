@@ -1,0 +1,41 @@
+<% include include/header.ejs %>
+
+<form method="get" action="/test">
+    <div class="container text-center" style="padding-top: 10%">
+        <h2>请选择你要测试的单元</h2> <br />
+        <% if(success.length > 0){ %>
+            <div class="row">
+                <div class="offset-md-3 col-md-6 alert alert-success">
+                    <%= success %>
+                </div>
+            </div>
+        <% } %>
+        <div class="row">
+            <select class="form-control offset-md-3 col-md-5" name="unit">
+                <% for(let v in data) { %>
+                <option><%= v %></option>
+                <% } %>
+            </select>
+            <h5>&nbsp;</h5>
+            <button type="submit" class="btn btn-outline-primary col-md-1">开始</button>
+        </div>
+        <h3> </h3>
+        <div class = "row offset-md-7">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="ok" id="defaultCheck1" name = "random">
+                <label class="form-check-label" for="defaultCheck1">
+                    随机排列
+                </label>
+            </div>
+            &nbsp;
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="ok" id="defaultCheck2" name = "ignore">
+                <label class="form-check-label" for="defaultCheck2">
+                    去除三角
+                </label>
+            </div>
+        </div>
+    </div>
+</form>
+
+<% include include/footer.ejs %>

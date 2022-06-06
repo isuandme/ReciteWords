@@ -1,0 +1,32 @@
+<% include ./../include/header.ejs %>
+    <form method="post" action="/user/notebook">
+        <div class="container" style="padding-top: 4%">
+            <h3>单词本</h3>
+            <table class="table table-bordered table-striped" style='text-align:center'>
+                <thead>
+                    <tr>
+                        <th>英文</th>
+                        <th>中文</th>
+                        <th>词性</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%= success%>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="#">delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </form>
+
+    <% include ./../include/footer.ejs %>
